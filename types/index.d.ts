@@ -8,13 +8,13 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   address: string;
   city: string;
   state: string;
-  postalcode: string;
-  dateofbirth: string;
+  postalCode: string;
+  dateOfBirth: string;
   ssn: string;
   email: string;
   password: string;
