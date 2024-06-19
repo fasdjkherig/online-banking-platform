@@ -25,11 +25,11 @@ import { getLoggedInUser, signIn, signUp } from "@/lib/actions/user.actions";
 const authFormSchema = (type: string) =>
   z.object({
     // sign-up
-    firstname:
+    firstName:
       type === "sign-in"
         ? z.string().optional()
         : z.string().min(1, "First name is required"),
-    lastname:
+    lastName:
       type === "sign-in"
         ? z.string().optional()
         : z.string().min(1, "Last name is required"),
@@ -45,11 +45,11 @@ const authFormSchema = (type: string) =>
       type === "sign-in"
         ? z.string().optional()
         : z.string().min(1, "State is required"),
-    postalcode:
+    postalCode:
       type === "sign-in"
         ? z.string().optional()
         : z.string().regex(/^[0-9]{5}$/, "Invalid postal code format"),
-    dateofbirth:
+    dateOfBirth:
       type === "sign-in"
         ? z.string().optional()
         : z
@@ -87,20 +87,7 @@ const AuthForm = ({ type }: { type: string }) => {
       // Sign up with Appwrite & create plaid token
 
       if (type === "sign-up") {
-        const userData = {
-          firstName: data.firstname!,
-          lastName: data.lastname!,
-          address: data.address!,
-          city: data.city!,
-          state: data.state!,
-          postalcode: data.postalcode!,
-          dateofbirth: data.dateofbirth!,
-          ssn: data.ssn!,
-          email: data.email,
-          password: data.password,
-        };
-
-        const newUser = await signUp(userData);
+        const newUser = await signUp(data);
 
         setUser(newUser);
       }
@@ -110,7 +97,6 @@ const AuthForm = ({ type }: { type: string }) => {
           email: data.email,
           password: data.password,
         });
-
         if (response) router.push("/");
       }
     } catch (error) {
@@ -159,7 +145,7 @@ const AuthForm = ({ type }: { type: string }) => {
                   <div className="flex gap-4">
                     <FormField
                       control={form.control}
-                      name="firstname"
+                      name="firstName"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>First Name</FormLabel>
@@ -177,7 +163,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
                     <FormField
                       control={form.control}
-                      name="lastname"
+                      name="lastName"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Last Name</FormLabel>
@@ -251,7 +237,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
                     <FormField
                       control={form.control}
-                      name="postalcode"
+                      name="postalCode"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Postal Code</FormLabel>
@@ -271,12 +257,13 @@ const AuthForm = ({ type }: { type: string }) => {
                   <div className="flex gap-4">
                     <FormField
                       control={form.control}
-                      name="dateofbirth"
+                      name="dateOfBirth"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Date of Birth</FormLabel>
                           <FormControl>
                             <Input
+                              type="date"
                               placeholder="yyyy-mm-dd"
                               className="input-class"
                               {...field}
