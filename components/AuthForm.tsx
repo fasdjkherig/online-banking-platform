@@ -87,20 +87,7 @@ const AuthForm = ({ type }: { type: string }) => {
       // Sign up with Appwrite & create plaid token
 
       if (type === "sign-up") {
-        const userData = {
-          firstName: data.firstName!,
-          lastName: data.lastName!,
-          address: data.address!,
-          city: data.city!,
-          state: data.state!,
-          postalcode: data.postalCode!,
-          dateofbirth: data.dateOfBirth!,
-          ssn: data.ssn!,
-          email: data.email,
-          password: data.password,
-        };
-
-        const newUser = await signUp(userData);
+        const newUser = await signUp(data);
 
         setUser(newUser);
       }
@@ -110,7 +97,6 @@ const AuthForm = ({ type }: { type: string }) => {
           email: data.email,
           password: data.password,
         });
-
         if (response) router.push("/");
       }
     } catch (error) {
@@ -277,6 +263,7 @@ const AuthForm = ({ type }: { type: string }) => {
                           <FormLabel>Date of Birth</FormLabel>
                           <FormControl>
                             <Input
+                              type="date"
                               placeholder="yyyy-mm-dd"
                               className="input-class"
                               {...field}
