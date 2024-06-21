@@ -33,7 +33,7 @@ const authFormSchema = (type: string) =>
       type === "sign-in"
         ? z.string().optional()
         : z.string().min(1, "Last name is required"),
-    address:
+    address1:
       type === "sign-in"
         ? z.string().optional()
         : z.string().min(1, "Address is required"),
@@ -93,7 +93,7 @@ const AuthForm = ({ type }: { type: string }) => {
         const userData = {
           firstName: data.firstName!,
           lastName: data.lastName!,
-          address: data.address!,
+          address1: data.address1!,
           city: data.city!,
           state: data.state!,
           postalCode: data.postalCode!,
@@ -113,6 +113,7 @@ const AuthForm = ({ type }: { type: string }) => {
           email: data.email,
           password: data.password,
         });
+
         if (response) router.push("/");
       }
     } catch (error) {
@@ -198,7 +199,7 @@ const AuthForm = ({ type }: { type: string }) => {
 
                   <FormField
                     control={form.control}
-                    name="address"
+                    name="address1"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Address</FormLabel>
