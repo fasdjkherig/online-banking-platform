@@ -60,7 +60,10 @@ const authFormSchema = (type: string) =>
         ? z.string().optional()
         : z
             .string()
-            .regex(/^[0-9]{5}$/, "Invalid SSN format should by 5 numbers"),
+            .regex(
+              /^\d{3}-\d{2}-\d{4}$/,
+              "SSN must be in the format XXX-XX-XXXX"
+            ),
     // sign-in
     email: z.string().email("Invalid email format"),
     password: z.string().min(6, "Password must be at least 6 characters long"),
