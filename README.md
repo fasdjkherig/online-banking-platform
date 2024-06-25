@@ -23,10 +23,9 @@
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Code Snippets to Copy](#snippets)
-6. 🔗 [Project demo](#project-demo)
-7. 🚀 [More](#more)
+4. 🚀 [Quick Start](#quick-start)
+5. 🔗 [Project demo](#project-demo)
+6. 🕸️ [More](#snippets)
 
 ## 🚨 Tutorial
 
@@ -150,7 +149,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 Project demo can be found [here](https://horizon-git-main-fasdjkherigs-projects.vercel.app/sign-in)
 
-## <a name="snippets">🚀 Snippets</a>
+## <a name="snippets">🕸️ Snippets</a>
 
 **Advance your skills with Next.js 14 Pro Course**
 
