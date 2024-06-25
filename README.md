@@ -25,7 +25,7 @@
 3. 🔋 [Features](#features)
 4. 🚀 [Quick Start](#quick-start)
 5. 🔗 [Project demo](#project-demo)
-6. 🕸️ [More](#snippets)
+6. 🕸️ [Snippets](#snippets)
 
 ## 🚨 Tutorial
 
