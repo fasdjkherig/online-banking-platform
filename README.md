@@ -25,7 +25,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Code Snippets to Copy](#snippets)
-6. 🔗 [Assets](#links)
+6. 🔗 [Project demo](#project demo)
 7. 🚀 [More](#more)
 
 ## 🚨 Tutorial
@@ -146,7 +146,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-## <a name="link">🔗 Link</a>
+## <a name="project demo">🔗 Link</a>
 
 Project demo can be found [here](https://horizon-git-main-fasdjkherigs-projects.vercel.app/sign-in)
 
