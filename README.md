@@ -22,7 +22,7 @@
 3. 🔋 [Features](#features)
 4. 🚀 [Quick Start](#quick-start)
 5. 🔗 [Project demo](#project-demo)
-6. 🕸️ [Snippets](#snippets)
+<!-- 6. 🕸️ [Snippets](#snippets) -->
 
 ## <a name="about">💡 About Project</a>
 
@@ -133,7 +133,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 Project demo can be found [here](https://horizon-git-main-fasdjkherigs-projects.vercel.app/sign-in)
 
-## <a name="snippets">🕸️ Snippets</a>
+<!-- ## <a name="snippets">🕸️ Snippets</a>
 
 **Advance your skills with Next.js 14 Pro Course**
 
@@ -150,4 +150,4 @@ Project demo can be found [here](https://horizon-git-main-fasdjkherigs-projects.
 <img src="https://github.com/sujatagunale/EasyRead/assets/151519281/fed352ad-f27b-400d-9b8f-c7fe628acb84" alt="Project Banner">
 </a>
 
-#
+# -->
